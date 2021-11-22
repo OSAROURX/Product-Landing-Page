@@ -1,1 +1,1 @@
-# [Product-Landing-Page](https://leviathansr.github.io/Product-Landing-Page/)
+# [Product-Landing-Page](https://product-landing-page-sr.netlify.app/)
