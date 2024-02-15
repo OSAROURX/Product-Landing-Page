@@ -24,25 +24,38 @@
       </div>
       <nav id="nav-bar">
         <ul class="nav-links">
-          <li><a class="nav-link" href="#home">Home</a></li>
+          <li>
+            <a class="nav-link" href="#home">Home</a>
+          </li>
           <li><a class="nav-link" href="#product-video">Watch</a></li>
           <li><a class="nav-link" href="#product">Price</a></li>
         </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <div class="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
       </nav>
     </header>
     <section id="home">
-      <div>
-        <div>
-          <h1>The World's Best T-shirt Collection is Finally Here!</h1>
-        </div>
-      </div>
-      <div class="btn">
-        <a href="#product" class="buy">Get Started</a>
+      <h1 class="hero-heading" contenteditable="">
+        Seriously Cool Heading You Can Edit Right Now!
+      </h1>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input
+          id="email"
+          class="text-field"
+          name="email"
+          type="email"
+          placeholder="Enter Your Email"
+          required="required"
+        />
+        <button id="submit" class="submit-button" name="email" type="submit">
+          Get Started
+        </button>
+      </form>
+      <div class="down-arrow-container">
+        <img src="assets/images/down-arrow.webp" alt="" />
       </div>
     </section>
     <section id="product-video">
@@ -84,42 +97,6 @@
             <img src="assets/images/product_6.webp" alt="sixth" />
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contacts">
-      <div class="center">
-        <h2>Contact Us</h2>
-        <span class="border"></span>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <div class="text">
-            <input
-              type="text"
-              name="name"
-              required="required"
-              placeholder="Your Name"
-            />
-            <span></span>
-            <label> Full Name </label>
-          </div>
-          <div class="text">
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required="required"
-            />
-            <span></span>
-            <label> Email </label>
-          </div>
-          <div class="textar">
-            <p>Your Message</p>
-            <textarea class="textarea"></textarea>
-          </div>
-          <div class="btn2">
-            <input type="submit" id="submit" value="Submit" />
-          </div>
-        </form>
       </div>
     </section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

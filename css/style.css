@@ -24,13 +24,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -42,35 +45,37 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  padding-inline: 3em;
+  padding-inline: 6rem;
   background-color: rgb(0, 0, 0);
 }
 
 header .logo {
-  width: 100px;
+  width: fit-content;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   margin-inline: 0 2rem;
 }
 
 header .logo img {
-  width: 100%;
-  height: 100%;
+  width: 100px;
   object-fit: scale-down;
 }
 
 header #nav-bar {
   height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header #nav-bar .nav-links {
-  min-width: fit-content;
-  width: 35vw;
+  width: 350px;
+  min-width: 40vw;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -92,92 +97,96 @@ header #nav-bar .nav-links li .nav-link {
   text-decoration: none;
   color: white;
   font-weight: 700;
+  transition: 0.15s ease-in-out;
 }
 
 header #nav-bar .nav-links li .nav-link:hover {
-  background-color: rgb(51, 112, 153);
+  background-color: #0076bb;
 }
 
-#contact {
-  background-color: #f5f5f5;
-  color: black;
-  border-radius: 25px;
-  padding: 10px 20px;
-  font-size: 17px;
-}
-
-.all {
-  width: 40%;
-  margin: 0 70px;
-  word-spacing: 3px;
-  font-size: 50px;
-}
-
-h1 {
-  letter-spacing: 2px;
-}
-
-.pro {
-  position: absolute;
-  width: 550px;
-  left: 55%;
-  top: -10%;
-}
-
-.btn {
-  margin-top: 60px;
-}
-
-.buy {
-  margin: 70px;
-  background-color: rgb(22, 22, 22);
-  color: #f5f5f5;
-  border-radius: 7px;
-  padding: 10px 20px;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.4s;
-  letter-spacing: 1px;
-}
-
-.buy:hover {
-  background-color: #00b7ff;
-  color: #f5f5f5;
-}
-
-.nav-link:hover {
-  color: #00b7ff;
-}
-
-#contact:hover {
-  background-color: #00b7ff;
-  color: #f5f5f5;
-}
-
-.burger {
-  display: none;
+header #nav-bar .burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
-  background-color: #f5f5f5;
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
-  border-radius: 50px;
-  padding: 10px 7px;
 }
 
-.burger div {
-  background-color: rgb(0, 0, 0);
-  margin: 5px;
-  width: 25px;
-  height: 3px;
+header #nav-bar .burger-menu .line {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  height: 5px;
+  width: 45px;
+  border-radius: 2px;
 }
 
 #home {
-  position: relative;
-  top: 20vh;
-  background-size: cover;
-  height: 100vh;
-  padding: 70px 0 0 40px;
+  padding-top: 10vh;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home .hero-heading {
+  text-align: center;
+  font-size: 4.75rem;
+  line-height: 1.5;
+  padding-inline: 6rem;
+  margin-block: 4rem 3rem;
+}
+
+#home form {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4.65rem;
+}
+
+#home form .text-field {
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  font-size: 1.125rem;
+  width: 65%;
+  color: black;
+  padding: 0.75em 0.5em;
+}
+
+#home form .text-field:focus {
+  outline: 3px solid #0076bb;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#home form .submit-button {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 35%;
+  background-color: black;
+  color: white;
+  padding: 0.75em 0.5em;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+#home form .submit-button:hover {
+  background-color: #0076bb;
+}
+
+#home .down-arrow-container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#home .down-arrow-container img {
+  width: 40px;
 }
 
 #product-video {
@@ -265,10 +274,6 @@ h1 {
   align-items: center;
   margin: 0;
 }
-
-/* .product-img img:hover {
-  transform: scale(1.1);
-} */
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -408,39 +413,20 @@ input:focus {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* @media only screen and (max-width: 1024px) {
-  .nav-links {
-    width: 70%;
+@media only screen and (max-width: 600px) {
+  header {
+    padding-inline: 1em;
   }
-  .responsive-wrapper {
-    height: 43%;
-    width: 50%;
-    left: 50%;
-    top: 40%;
+
+  header #nav-bar .nav-links {
+    display: none;
   }
-  .all {
-    width: 50%;
-    margin: 0 20px;
-  }
-  .buy {
-    margin: 20px;
-  }
-  #nav-bar {
-    width: 100%;
-    min-height: 8vh;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-  .center {
-    width: 50%;
-    padding: 0;
-  }
-  .pro {
-    width: 400px;
-    top: 10px;
+
+  header #nav-bar .burger-menu .line {
+    display: block;
   }
 }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
