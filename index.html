@@ -18,17 +18,17 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header id="header">
+    <!-- <header id="header">
       <div class="logo">
         <img id="header-img" src="assets/images/logo.webp" alt="logo" />
       </div>
       <nav id="nav-bar">
         <ul class="nav-links">
           <li>
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#hero">Home</a>
           </li>
           <li><a class="nav-link" href="#product-video">Watch</a></li>
-          <li><a class="nav-link" href="#product">Price</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
         </ul>
         <div class="burger-menu">
           <div class="line"></div>
@@ -36,29 +36,47 @@
           <div class="line"></div>
         </div>
       </nav>
-    </header>
-    <section id="home">
-      <h1 class="hero-heading" contenteditable="">
-        Seriously Cool Heading You Can Edit Right Now!
-      </h1>
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input
-          id="email"
-          class="text-field"
-          name="email"
-          type="email"
-          placeholder="Enter Your Email"
-          required="required"
-        />
-        <button id="submit" class="submit-button" name="email" type="submit">
-          Get Started
-        </button>
-      </form>
-      <div class="down-arrow-container">
-        <img src="assets/images/down-arrow.webp" alt="" />
+    </header> -->
+    <section id="section-hero">
+      <div class="hero">
+        <div class="hero-text-box">
+          <h1 class="hero-heading">
+            Mystery Awaits: Find Your Perfect Box of Secrets!
+          </h1>
+          <p class="hero-paragraph">
+            Welcome to the Mystery Box Experience, where every unopened box
+            holds endless possibilities. Dive into the unknown and uncover a
+            world of surprises with our exclusive mystery boxes. From curious
+            artifacts to rare treasures, each box holds a secret waiting to be
+            revealed. Join the adventure today and embrace the thrill of the
+            unexpected. Unlock the mystery now!
+          </p>
+          <form
+            id="form"
+            class="hero-form"
+            action="https://www.freecodecamp.com/email-submit"
+          >
+            <input
+              id="email"
+              class="email-field"
+              type="email"
+              name="email"
+              placeholder="Enter Your Email"
+              required="required"
+            />
+            <button id="submit" class="submit-btn">Get Yours Now!</button>
+          </form>
+        </div>
+        <div class="hero-img-box">
+          <img
+            class="hero-img"
+            src="assets/images/mystery-box.webp"
+            alt="Mystery Box"
+          />
+        </div>
       </div>
     </section>
-    <section id="product-video">
+    <!-- <section id="product-video">
       <h2>Watch The Trailer</h2>
       <div class="responsive-padding">
         <div class="responsive-wrapper">
@@ -76,10 +94,6 @@
         <div class="product-container">
           <div class="product-img">
             <img src="assets/images/product_1.webp" alt="first" />
-            <!-- <div class="product-info">
-              <p>price</p>
-              <button>Add to Cart</button>
-            </div> -->
           </div>
           <div class="product-img">
             <img src="assets/images/product_2.webp" alt="second" />
@@ -98,7 +112,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
