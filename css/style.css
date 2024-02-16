@@ -1,28 +1,42 @@
-/* montserrat-regular - latin */
+/* open-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Montserrat";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/montserrat-v26-latin-regular.woff2") format("woff2"),
+  src: url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/montserrat-v26-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../fonts/open-sans-v40-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
-/* montserrat-700 - latin */
+/* open-sans-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Montserrat";
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/open-sans-v40-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/open-sans-v40-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/montserrat-v26-latin-700.woff2") format("woff2"),
+  src: url("../fonts/open-sans-v40-latin-700.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("../fonts/montserrat-v26-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../fonts/open-sans-v40-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 :root {
+  --main-dark-text-color: #333333;
+  --main-light-text-color: #dddddd;
   --primary-color: #0079ca;
-  --big-font-size: 2rem;
+  --primary-tint: #e6f2fa;
+  --primary-shade: #006db6;
 }
 
 * {
@@ -32,81 +46,82 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #303030;
+  font-family: "Open Sans", sans-serif;
+  color: var(--main-dark-text-color);
+}
+
+.section-hero {
+  padding-block: 6rem;
+  background-color: var(--primary-tint);
 }
 
 .hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  max-width: 100rem;
+  gap: 6rem;
+  align-items: center;
+  max-width: 75rem;
   margin: 0 auto;
-  background-color: #e6f2fa;
 }
 
-.hero-img {
-  width: 100%;
+.hero-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  letter-spacing: -0.65px;
+  line-height: 1.25;
+  margin-bottom: 2rem;
 }
 
-.hero-text-box {
-  /* grid-area: 1 / 2 / 2 / 3; */
+.hero-paragraph {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 3rem;
 }
+
+.hero-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-field {
+  width: 60%;
+  color: var(--main-dark-text-color);
+  border: 1px solid var(--main-dark-text-color);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 1rem 0.5rem;
+}
+
+.submit-btn {
+  width: 40%;
+  color: var(--main-light-text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-shade);
+}
+
 .hero-img-box {
-  /* grid-area: 1 / 4 / 2 / 5; */
-}
-
-.hero-img-box img {
-  /* max-width: 100%; */
-}
-
-#section-hero .hero-heading {
-  /* text-align: center;
-  /* font-size: 4.75rem; */
-  /* line-height: 1.5; */
-  /* padding-inline: 6rem;
-  margin-block: 4rem 3rem; */
-}
-
-#section-hero form {
-  /* width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; */
-  /* margin-bottom: 4.65rem; */
 }
 
-#section-hero form .text-field {
-  /* border: 1px solid #000000;
-  border-radius: 3px;
-  font-size: 1rem;
-  width: 65%;
-  color: black;
-  padding: 0.5rem 0.25rem; */
-}
-
-#section-hero form .submit-button {
-  /* outline: none;
-  border: none;
-  border-radius: 3px;
-  font-size: 1rem;
-  font-weight: 700;
-  width: 35%;
-  background-color: #0084d1;
-  color: white;
-  padding: 0.5rem 0.25rem;
-  cursor: pointer;
-  transition: 0.15s ease-in-out; */
-}
-
-#section-hero form .submit-button:hover {
-  /* background-color: #0077bc; */
+.hero-img {
+  max-width: 70%;
 }
