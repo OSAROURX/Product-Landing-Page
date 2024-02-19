@@ -19,26 +19,26 @@
   </head>
   <body>
     <header class="header" id="header">
-      <div class="logo-container">
+      <a href="#" class="logo-container">
         <img
           class="logo"
           id="header-img"
           src="assets/images/logo.webp"
           alt="logo"
         />
-      </div>
+      </a>
       <nav class="nav-bar" id="nav-bar">
         <ul class="nav-links">
           <li>
             <a class="nav-link" href="#features">Features</a>
           </li>
-          <li><a class="nav-link" href="#product-video">Watch</a></li>
+          <li><a class="nav-link" href="#promotion-video">Watch</a></li>
           <li><a class="nav-link" href="#pricing">Pricing</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="hero" class="section-hero">
+      <section id="hero" class="hero-section">
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="hero-heading">
@@ -74,84 +74,131 @@
           </div>
         </div>
       </section>
-      <section id="features" class="section-features">
+      <section id="features" class="features-section">
         <div class="features-heading"><h2>Exciting Features</h2></div>
         <div class="features-box">
           <div class="feature-box">
             <div class="feature-img-box">
               <ion-icon name="star-half"></ion-icon>
+              <h3>Surprise Contents</h3>
             </div>
             <div class="feature-text-box">
               <p>
-                Customize your mystery box with various themes, options, and
-                items.
+                Curabitur iaculis velit quis turpis porttitor, quis elementum
+                leo hendrerit.
               </p>
             </div>
           </div>
           <div class="feature-box">
             <div class="feature-img-box">
               <ion-icon name="pricetags"></ion-icon>
+              <h3>Exclusive Items</h3>
             </div>
             <div class="feature-text-box">
               <p>
-                Discover rare and exclusive items for a unique unboxing
-                experience.
+                Aenean faucibus diam eget est bibendum eleifend aliquet et
+                augue.
               </p>
             </div>
           </div>
           <div class="feature-box">
             <div class="feature-img-box">
-              <ion-icon name="calendar"></ion-icon>
+              <ion-icon name="color-wand"></ion-icon>
+              <h3>Custom Themes</h3>
             </div>
             <div class="feature-text-box">
               <p>
-                Experience the excitement of monthly surprise boxes filled with
-                goodies.
+                Proin placerat massa quis sem finibus, eu faucibus ipsum
+                tincidunt.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section id="product-video">
-        <h2>Watch The Trailer</h2>
-        <div class="responsive-padding">
-          <div class="responsive-wrapper">
+      <section class="video-section" id="promotion-video">
+        <div class="promo-video-wrapper">
+          <div class="video-heading"><h2>Watch This</h2></div>
+          <div class="video-box">
             <video
+              class="video-file"
               id="video"
               src="assets/videos/placeholder.mp4"
               controls
             ></video>
           </div>
         </div>
-      </section> -->
-      <!--
-      <section id="product">
-        <div class="wrapper">
-          <h2>Popular Products</h2>
-          <div class="product-container">
-            <div class="product-img">
-              <img src="assets/images/product_1.webp" alt="first" />
+      </section>
+      <section class="pricing-section" id="pricing">
+        <div class="pricing-container">
+          <div class="pricing-heading"><h2>Pricing</h2></div>
+          <div class="pricing-box">
+            <div class="pricing-plan">
+              <p class="plan-name">Basic</p>
+              <p class="plan-price"><span>$</span>29.99</p>
+              <p class="plan-text">Dive into the mystery.</p>
+              <ul class="options-list">
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="close-sharp"></ion-icon> Lorem ipsum dolor sit
+                  amet.
+                </li>
+              </ul>
+              <div class="order-box">
+                <a href="#" class="order-btn">Order Now</a>
+              </div>
             </div>
-            <div class="product-img">
-              <img src="assets/images/product_2.webp" alt="second" />
-            </div>
-            <div class="product-img">
-              <img src="assets/images/product_3.webp" alt="third" />
-            </div>
-            <div class="product-img">
-              <img src="assets/images/product_4.webp" alt="fourth" />
-            </div>
-            <div class="product-img">
-              <img src="assets/images/product_5.webp" alt="fifth" />
-            </div>
-            <div class="product-img">
-              <img src="assets/images/product_6.webp" alt="sixth" />
+            <div class="pricing-plan popular">
+              <p class="plan-name">Premium</p>
+              <p class="plan-price"><span>$</span>49.99</p>
+              <p class="plan-text">Experience deeper intrigue.</p>
+              <ul class="options-list">
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+                <li class="options">
+                  <ion-icon name="checkmark-sharp"></ion-icon> Lorem ipsum dolor
+                  sit amet.
+                </li>
+              </ul>
+              <div class="order-box">
+                <a href="#" class="order-btn">Order Now</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="pricing">heloo</section> -->
     </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 BOX Inc. All rights reserved.</p>
+          <p>
+            Contact us:
+            <a href="mailto:contact@box.com">contact@mysterybox.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
