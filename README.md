@@ -1,1 +1,1 @@
-![mystery-box-experience](./assets/images/screenshot_0.webp)
+![box-inc](./assets/images/screenshot_0.webp)
