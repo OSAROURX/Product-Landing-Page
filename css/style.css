@@ -218,6 +218,7 @@ body {
   align-items: start;
   margin: 0 auto;
   padding-inline: 6rem;
+  max-width: 86rem;
 }
 
 .feature-box {
@@ -286,7 +287,6 @@ body {
 .pricing-section {
   background-color: white;
   padding-block: 6rem;
-  /* height: 100vh; */
 }
 
 .pricing-container {
@@ -301,23 +301,47 @@ body {
 }
 
 .pricing-box {
+  max-width: 86rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 6rem;
+  grid-column-gap: 2rem;
   grid-row-gap: 0px;
+  margin: 0 auto;
 }
 
 .pricing-plan {
-  border: 1px solid var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(20, 91, 184, 0.15) 0px 0px 0px 1px;
   border-radius: var(--global-border-radius);
-  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .popular {
   border: none !important;
+  box-shadow: none !important;
   background-color: var(--primary-tint) !important;
-  padding: 2.0625rem 4rem;
+  overflow: hidden;
+}
+
+.popular::after {
+  content: "Most Popular";
+  position: absolute;
+  top: 2.5625rem;
+  right: -3.4375rem;
+  background-color: var(--primary-color);
+  color: var(--main-light-text-color);
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 8px 52px;
+  transform: rotate(45deg);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .plan-name {
@@ -325,33 +349,32 @@ body {
   font-weight: 600;
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
 }
 
 .plan-price {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .plan-price span {
   font-size: 2rem !important;
   margin-right: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: -0.5rem;
 }
 
 .plan-text {
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .options-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
@@ -371,6 +394,7 @@ body {
 
 .order-box {
   text-align: center;
+  width: 100%;
 }
 
 .order-btn {
@@ -423,4 +447,22 @@ footer {
 
 .footer-content a:hover {
   text-decoration: underline;
+}
+
+/*************************/
+/* Responsive Design */
+/*************************/
+
+@media (max-width: 71.25em) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 6rem;
+  }
+
+  .hero-img-box {
+    display: flex;
+    justify-content: center;
+  }
 }
