@@ -43,13 +43,24 @@
 }
 
 :root {
-  --main-dark-text-color: #242424;
-  --main-light-text-color: #ffffff;
-  --primary-color: #155cb8;
-  --primary-tint: #e8eff8;
-  --primary-shade: #1353a6;
-  --global-transition: 0.25s ease-in-out;
-  --global-border-radius: 5px;
+  /* colors */
+  --color-text-dark: #242424;
+  --color-text-light: #ffffff;
+
+  --color-primary: #155cb8;
+  --color-primary-shade: #1353a6;
+  --color-primary-tint: #e8eff8;
+
+  /* font sizes */
+  /* --font-size-big: 1rem; */
+
+  /* paddings, margins, ... */
+  --grid-padding-inline: 6rem;
+  --grid-column-gap: 6rem;
+
+  /* miscellaneous */
+  --transition: 0.25s ease-in-out;
+  --border-radius: 5px;
 }
 
 * {
@@ -64,7 +75,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: var(--main-dark-text-color);
+  color: var(--color-text-dark);
 }
 
 /*************************/
@@ -78,8 +89,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 6rem;
-  background-color: var(--primary-tint);
+  padding-inline: var(--grid-padding-inline);
+  background-color: var(--color-primary-tint);
   z-index: 999;
 }
 
@@ -104,15 +115,15 @@ body {
 .nav-link {
   display: inline-block;
   text-decoration: none;
-  color: var(--main-dark-text-color);
+  color: inherit;
   font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  transition: color var(--global-transition);
+  transition: color var(--transition);
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 /*************************/
@@ -121,19 +132,19 @@ body {
 
 .hero-section {
   padding-block: 10rem 6rem;
-  background-color: var(--primary-tint);
+  background-color: var(--color-primary-tint);
 }
 
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 6rem;
+  grid-column-gap: var(--grid-column-gap);
   grid-row-gap: 0px;
   align-items: center;
   max-width: 86rem;
   margin: 0 auto;
-  padding-inline: 6rem;
+  padding-inline: var(--grid-padding-inline);
 }
 
 .hero-heading {
@@ -160,9 +171,8 @@ body {
 
 .email-field {
   width: 70%;
-  color: var(--main-dark-text-color);
-  border: 1px solid var(--primary-color);
-  border-radius: var(--global-border-radius);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
   font-size: 1.25rem;
   padding: 0.75rem 0.5rem;
 }
@@ -171,18 +181,18 @@ body {
   width: 30%;
   min-width: 8rem;
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   border: none;
-  border-radius: var(--global-border-radius);
+  border-radius: var(--border-radius);
   font-size: 1.25rem;
   font-weight: 600;
   padding: 0.75rem 0.5rem;
   cursor: pointer;
-  transition: background-color var(--global-transition);
+  transition: background-color var(--transition);
 }
 
 .submit-btn:hover {
-  background-color: var(--primary-shade);
+  background-color: var(--color-primary-shade);
 }
 
 .hero-img-box {
@@ -191,7 +201,8 @@ body {
 }
 
 .hero-img {
-  width: 26.5rem;
+  max-width: 100%;
+  min-width: 20rem;
 }
 
 /*************************/
@@ -213,11 +224,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 96px;
+  grid-column-gap: var(--grid-column-gap);
   grid-row-gap: 0px;
   align-items: start;
   margin: 0 auto;
-  padding-inline: 6rem;
+  padding-inline: var(--grid-padding-inline);
   max-width: 86rem;
 }
 
@@ -235,7 +246,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .feature-img-box ion-icon {
@@ -258,7 +269,7 @@ body {
 
 .video-section {
   padding-block: 6rem;
-  background-color: var(--primary-tint);
+  background-color: var(--color-primary-tint);
 }
 
 .video-heading {
@@ -268,7 +279,7 @@ body {
 }
 
 .promo-video-wrapper {
-  padding-inline: 6rem;
+  padding-inline: var(--grid-padding-inline);
 }
 
 .video-box {
@@ -276,7 +287,8 @@ body {
 }
 
 .video-file {
-  max-width: 50rem;
+  width: 50rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -291,7 +303,7 @@ body {
 
 .pricing-container {
   margin: 0 auto;
-  padding-inline: 6rem;
+  padding-inline: var(--grid-padding-inline);
 }
 
 .pricing-heading {
@@ -306,14 +318,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  grid-row-gap: 0px;
   margin: 0 auto;
 }
 
 .pricing-plan {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(20, 91, 184, 0.15) 0px 0px 0px 1px;
-  border-radius: var(--global-border-radius);
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -326,18 +337,18 @@ body {
 .popular {
   border: none !important;
   box-shadow: none !important;
-  background-color: var(--primary-tint) !important;
+  background-color: var(--color-primary-tint) !important;
   overflow: hidden;
 }
 
 .popular::after {
   content: "Most Popular";
   position: absolute;
-  top: 2.5625rem;
-  right: -3.4375rem;
-  background-color: var(--primary-color);
-  color: var(--main-light-text-color);
-  font-size: 1.125rem;
+  top: 1.875rem;
+  right: -3.75rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-size: 1rem;
   font-weight: 700;
   padding: 8px 52px;
   transform: rotate(45deg);
@@ -345,7 +356,7 @@ body {
 }
 
 .plan-name {
-  color: var(--primary-color);
+  color: var(--color-primary);
   font-weight: 600;
   text-align: center;
   font-size: 1.5rem;
@@ -388,7 +399,7 @@ body {
 }
 
 .options ion-icon {
-  color: var(--primary-color);
+  color: var(--color-primary);
   font-size: 2rem !important;
 }
 
@@ -403,18 +414,18 @@ body {
   min-width: 8rem;
   text-decoration: none;
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   border: none;
-  border-radius: var(--global-border-radius);
+  border-radius: var(--border-radius);
   font-size: 1.25rem;
   font-weight: 600;
   padding: 0.75rem 0.5rem;
   cursor: pointer;
-  transition: background-color var(--global-transition);
+  transition: background-color var(--transition);
 }
 
 .order-btn:hover {
-  background-color: var(--primary-shade);
+  background-color: var(--color-primary-shade);
 }
 
 /*************************/
@@ -422,13 +433,12 @@ body {
 /*************************/
 
 footer {
-  background-color: var(--primary-tint);
-  color: var(--main-dark-text-color);
+  background-color: var(--color-primary-tint);
   padding: 3rem 0;
 }
 
 .container {
-  padding-inline: 6rem;
+  padding-inline: var(--grid-padding-inline);
   margin: 0 auto;
 }
 
@@ -442,7 +452,7 @@ footer {
 
 .footer-content a {
   text-decoration: none;
-  color: var(--main-dark-text-color);
+  color: inherit;
 }
 
 .footer-content a:hover {
@@ -453,16 +463,104 @@ footer {
 /* Responsive Design */
 /*************************/
 
-@media (max-width: 71.25em) {
+@media (max-width: 480px) {
+  :root {
+    --grid-padding-inline: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    padding-block: 1rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --grid-padding-inline: 2rem;
+  }
+
+  .nav-links {
+    gap: 3rem;
+  }
+
+  .hero-form {
+    flex-direction: column;
+  }
+
+  .email-field,
+  .submit-btn {
+    min-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .features-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 40rem;
+    justify-content: center;
+    grid-row-gap: 2rem;
+  }
+
+  .feature-text-box {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 1020px) {
+  .pricing-box {
+    max-width: 22rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1080px) {
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 6rem;
+    grid-row-gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-heading,
+  .hero-paragraph {
+    text-align: center;
+  }
+
+  .email-field {
+    width: 60%;
+  }
+
+  .submit-btn {
+    width: 40%;
   }
 
   .hero-img-box {
     display: flex;
     justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 70%;
+    /* min-width: 30rem; */
   }
 }
